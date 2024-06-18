@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#004225"
+    tools:context=".ViewItemActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#FFB000"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:logo="@mipmap/ic_launcher_foreground"
+        app:title="Jorell Andrei Finez"
+        app:titleMargin="10dp"
+        app:titleMarginStart="10dp"
+        app:titleTextColor="#004225" />
+
+    <TextView
+        android:id="@+id/itemDetailsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:background="#F5F5DC"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text=""
+        android:textColor="#004225"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <Spinner
+        android:id="@+id/sortBySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/round_edittext"
+        android:padding="16dp"
+        android:spinnerMode="dropdown"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+
+        />
+
+    <RadioGroup
+        android:id="@+id/sortOrderGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <RadioButton
+            android:id="@+id/sortAscending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:checked="true"
+            android:text="Ascending"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/sortDescending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descending"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/app_name"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/itemsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Dynamic list items will be added here programmatically -->
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/prevAct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|bottom"
+        android:layout_margin="28dp"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+</LinearLayout>

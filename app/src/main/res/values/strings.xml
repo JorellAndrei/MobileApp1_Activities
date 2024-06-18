@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FINEZ - ACTIVITIES</string>
+
+    <string-array name="sort_by_options">
+        <item>Sort by ID</item>
+        <item>Sort by Name</item>
+        <item>Sort by Price</item>
+    </string-array>
+</resources>

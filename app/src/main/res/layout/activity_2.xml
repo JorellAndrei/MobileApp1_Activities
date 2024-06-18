@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#004225"
+    tools:context=".Activity2">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="#FFB000"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:logo="@mipmap/ic_launcher_foreground"
+        app:title="Jorell Andrei Finez"
+        app:titleMargin="10dp"
+        app:titleMarginStart="10dp"
+        app:titleTextColor="#004225" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Item Information System"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:backgroundTint="#FEAF00"
+        android:fontFamily="@font/montserrat_medium"
+        android:shadowColor="#FFFFFF"
+        android:textSize="24sp"
+        app:circularflow_radiusInDP="0dp"
+        app:cornerRadius="0dp"
+        android:text="Add Item" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:backgroundTint="#FEAF00"
+        android:fontFamily="@font/montserrat_medium"
+        android:shadowColor="#FFFFFF"
+        android:textSize="24sp"
+        app:circularflow_radiusInDP="0dp"
+        app:cornerRadius="0dp"
+        android:text="Delete Item" />
+
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:backgroundTint="#FEAF00"
+        android:fontFamily="@font/montserrat_medium"
+        android:shadowColor="#FFFFFF"
+        android:textSize="24sp"
+        app:circularflow_radiusInDP="0dp"
+        app:cornerRadius="0dp"
+        android:text="Edit Item" />
+
+    <Button
+        android:id="@+id/viewButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:backgroundTint="#FEAF00"
+        android:fontFamily="@font/montserrat_medium"
+        android:shadowColor="#FFFFFF"
+        android:textSize="24sp"
+        app:circularflow_radiusInDP="0dp"
+        app:cornerRadius="0dp"
+        android:text="View Item" />
+
+    <Button
+        android:id="@+id/viewAllButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:backgroundTint="#FEAF00"
+        android:fontFamily="@font/montserrat_medium"
+        android:shadowColor="#FFFFFF"
+        android:textSize="24sp"
+        app:circularflow_radiusInDP="0dp"
+        app:cornerRadius="0dp"
+        android:text="View All Items" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/nextAct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="28dp"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@android:drawable/ic_media_play" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/prevAct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:layout_margin="28dp"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@android:drawable/ic_media_previous" />
+    </FrameLayout>
+
+
+
+</LinearLayout>
