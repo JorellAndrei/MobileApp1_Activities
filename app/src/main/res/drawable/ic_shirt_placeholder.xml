@@ -1,0 +1,13 @@
+<!-- ic_shirt_placeholder.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Shirt shape -->
+    <path
+        android:fillColor="#FF9800"
+    android:pathData="M6,2v20h12v-20h-12zM16,20h-8v-3h8v3zM16,15h-8v-8h8v8z"/>
+
+</vector>

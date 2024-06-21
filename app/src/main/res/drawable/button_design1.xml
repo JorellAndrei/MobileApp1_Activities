@@ -4,19 +4,19 @@
     <item>
         <shape  android:shape="rectangle">
             <!--            Button Shadow Color -->
-            <solid android:color="#FEAF00" />
+            <solid android:color="@color/primary" />
             <corners android:radius="7dp" />
         </shape>
     </item>
     <!-- White Top color -->
-    <item android:bottom="15px">
+    <item android:bottom="30px">
         <shape  android:shape="rectangle">
             <padding android:bottom="10dp"
                 android:top="10dp"
-                android:left="20dp"
+                android:left="10dp"
                 android:right="20dp"/>
             <!--            Button TOP Color -->
-            <solid android:color="#EF5350" />
+            <solid android:color="@color/secondary" />
             <corners android:radius="7dp" />
         </shape>
     </item>

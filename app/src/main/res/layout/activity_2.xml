@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#004225"
+    android:background="#291901"
     tools:context=".Activity2">
 
     <androidx.appcompat.widget.Toolbar
@@ -24,120 +24,823 @@
         app:titleMarginStart="10dp"
         app:titleTextColor="#004225" />
 
-    <TextView
+    <!--  CONTAINER SEARCH  -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Item Information System"
-        android:fontFamily="@font/montserrat_medium"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textAlignment="center"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        />
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="0dp"
+        >
 
-    <Button
-        android:id="@+id/addButton"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:backgroundTint="#FEAF00"
-        android:fontFamily="@font/montserrat_medium"
-        android:shadowColor="#FFFFFF"
-        android:textSize="24sp"
-        app:circularflow_radiusInDP="0dp"
-        app:cornerRadius="0dp"
-        android:text="Add Item" />
+        <!-- Search EditText -->
+        <EditText
+            android:id="@+id/searchField"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_background"
+            android:drawableEnd="@drawable/ic_search"
+            android:drawableRight="@drawable/ic_search"
+            android:hint="Search for FEU Products"
+            android:paddingStart="12dp"
+            android:paddingLeft="13dp"
+            android:paddingEnd="20dp"
+            android:paddingRight="40dp"
+            android:textSize="13sp"
+            tools:ignore="TouchTargetSizeCheck" />
 
-    <Button
-        android:id="@+id/deleteButton"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:backgroundTint="#FEAF00"
-        android:fontFamily="@font/montserrat_medium"
-        android:shadowColor="#FFFFFF"
-        android:textSize="24sp"
-        app:circularflow_radiusInDP="0dp"
-        app:cornerRadius="0dp"
-        android:text="Delete Item" />
-
-    <Button
-        android:id="@+id/editButton"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:backgroundTint="#FEAF00"
-        android:fontFamily="@font/montserrat_medium"
-        android:shadowColor="#FFFFFF"
-        android:textSize="24sp"
-        app:circularflow_radiusInDP="0dp"
-        app:cornerRadius="0dp"
-        android:text="Edit Item" />
-
-    <Button
-        android:id="@+id/viewButton"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:backgroundTint="#FEAF00"
-        android:fontFamily="@font/montserrat_medium"
-        android:shadowColor="#FFFFFF"
-        android:textSize="24sp"
-        app:circularflow_radiusInDP="0dp"
-        app:cornerRadius="0dp"
-        android:text="View Item" />
-
-    <Button
-        android:id="@+id/viewAllButton"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:backgroundTint="#FEAF00"
-        android:fontFamily="@font/montserrat_medium"
-        android:shadowColor="#FFFFFF"
-        android:textSize="24sp"
-        app:circularflow_radiusInDP="0dp"
-        app:cornerRadius="0dp"
-        android:text="View All Items" />
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/nextAct"
+        <!-- Search Button -->
+        <Button
+            android:id="@+id/searchBtn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end|bottom"
-            android:layout_margin="28dp"
-            android:clickable="true"
-            android:contentDescription="@string/app_name"
-            app:srcCompat="@android:drawable/ic_media_play" />
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Find"
+            app:cornerRadius="0dp"
+            android:backgroundTint="@color/primary"/>
+    </LinearLayout>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/prevAct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start|bottom"
-            android:layout_margin="28dp"
-            android:clickable="true"
-            android:contentDescription="@string/app_name"
-            app:srcCompat="@android:drawable/ic_media_previous" />
-    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="23dp"
+        android:background="@drawable/roundcorners_bg"
+        android:orientation="vertical"
+        android:padding="7dp"
+        tools:ignore="RtlHardcoded"
+        >
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!-- Checkbox 1 -->
+            <CheckBox
+                android:id="@+id/sortByShirt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="15dp"
+                android:text="Shirts"
+                android:textColor="@color/secondary"
+                android:buttonTint="@color/secondary"
+                tools:ignore="HardcodedText,TouchTargetSizeCheck"
+                android:fontFamily="@font/montserrat_medium"/>
+
+            <!-- Checkbox 2 -->
+            <CheckBox
+                android:id="@+id/sortByLace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="15dp"
+                android:text="ID Laces"
+                android:textColor="@color/secondary"
+                android:buttonTint="@color/secondary"
+                tools:ignore="HardcodedText,TouchTargetSizeCheck"
+                android:fontFamily="@font/montserrat_medium"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <!-- Checkbox 1 -->
+            <CheckBox
+                android:id="@+id/sortByOthers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="15dp"
+                android:text="Others"
+                android:textColor="@color/secondary"
+                android:buttonTint="@color/secondary"
+                tools:ignore="HardcodedText,TouchTargetSizeCheck"
+                android:fontFamily="@font/montserrat_medium"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="0dp"
+        >
+        <!-- Scrollable Layout -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="FEU SHIRT"
+                    android:textColor="@color/primary"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="30sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="10dp"
+                    tools:ignore="HardcodedText" />
+
+                <!--  CONTAINER SHIRTS  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- ROW 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
+
+                        <!-- SHIRT1 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:id="@+id/imageButton1"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_shirt_placeholder"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:id="@+id/textViewName1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Embro Shirt | ₱450"
+                                android:textSize="13sp"
+                                android:layout_marginBottom="15dp"
+                                android:fontFamily="@font/montserrat_light"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+                        <!-- SHIRT2 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:id="@+id/imageButton2"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_shirt_placeholder"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:id="@+id/textViewName2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Polo Shirt | ₱450"
+                                android:textSize="13sp"
+                                android:layout_marginBottom="15dp"
+                                android:fontFamily="@font/montserrat_light"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- ROW 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
+
+                        <!-- SHIRT3 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:id="@+id/imageButton3"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_shirt_placeholder"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:id="@+id/textViewName3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Stripes Shirt | ₱470"
+                                android:textSize="13sp"
+                                android:layout_marginBottom="15dp"
+                                android:fontFamily="@font/montserrat_light"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+                        <!-- SHIRT4 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:id="@+id/imageButton4"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:contentDescription="@string/app_name"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_shirt_placeholder" />
+
+                            <TextView
+                                android:id="@+id/textViewName4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Urban Shirt | ₱400"
+                                android:textSize="13sp"
+                                android:layout_marginBottom="15dp"
+                                android:fontFamily="@font/montserrat_light"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Container Sizes -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        >
+
+                        <!-- First Row of RadioButtons -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            tools:ignore="UselessParent">
+
+                            <!-- Radio Buttons 1 and 2 -->
+                            <RadioGroup
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="16dp"
+                                android:gravity="center">
+
+                                <RadioButton
+                                    android:id="@+id/smallSize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="15dp"
+                                    android:buttonTint="@color/primary"
+                                    android:checked="true"
+                                    android:fontFamily="@font/montserrat"
+                                    android:text="Small"
+                                    android:textColor="@color/white"
+                                    android:textSize="15sp"
+                                    tools:ignore="TouchTargetSizeCheck" />
+
+                                <RadioButton
+                                    android:id="@+id/MediumSize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="15dp"
+                                    android:buttonTint="@color/primary"
+                                    android:fontFamily="@font/montserrat"
+                                    android:text="Medium"
+                                    android:textColor="@color/white"
+                                    android:textSize="15sp"
+                                    tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+                                <RadioButton
+                                    android:id="@+id/LargeSize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="15dp"
+                                    android:buttonTint="@color/primary"
+                                    android:fontFamily="@font/montserrat"
+                                    android:text="Large"
+                                    android:textColor="@color/white"
+                                    android:textSize="15sp"
+                                    tools:ignore="HardcodedText,RtlHardcoded,TouchTargetSizeCheck" />
+
+                                <RadioButton
+                                    android:id="@+id/extraLargeSize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="15dp"
+                                    android:buttonTint="@color/primary"
+                                    android:fontFamily="@font/montserrat"
+                                    android:text="XL"
+                                    android:textColor="@color/white"
+                                    android:textSize="15sp"
+                                    tools:ignore="TouchTargetSizeCheck" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="ID LACE"
+                    android:textColor="@color/primary"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="30sp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="10dp"
+                    tools:ignore="HardcodedText" />
+
+                <!--  CONTAINER ID LACE  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Lace 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageButton
+                            android:id="@+id/imageButton5"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_shirt_placeholder"
+                            android:background="@drawable/rectangle_background"
+                            android:contentDescription="Shirt Image 1"/>
+
+                        <TextView
+                            android:id="@+id/textViewName5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="FEU Minimalist | ₱105"
+                            android:textSize="13sp"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/montserrat_light"
+                            android:textColor="@color/white"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                    <!-- Lace 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageButton
+                            android:id="@+id/imageButton6"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_shirt_placeholder"
+                            android:background="@drawable/rectangle_background"
+                            android:contentDescription="Shirt Image 2"/>
+
+                        <TextView
+                            android:id="@+id/textViewName6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="FEU Aztec Reversible | ₱100"
+                            android:textSize="13sp"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/montserrat_light"
+                            android:textColor="@color/white"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                    <!-- Lace 3 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageButton
+                            android:id="@+id/imageButton7"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_shirt_placeholder"
+                            android:background="@drawable/rectangle_background"
+                            android:contentDescription="Shirt Image 2"/>
+
+                        <TextView
+                            android:id="@+id/textViewName7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="FEU Tech Circuit | ₱100"
+                            android:textSize="13sp"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/montserrat_light"
+                            android:textColor="@color/white"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="OTHERS"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="30sp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="10dp"
+                    tools:ignore="HardcodedText" />
+
+                <!--  CONTAINER OTHERS  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- ROW 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <!-- Others1 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:id="@+id/imageButton8"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_shirt_placeholder"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:id="@+id/textViewName8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="FEU Keychain | ₱160"
+                                android:textSize="13sp"
+                                android:layout_marginBottom="15dp"
+                                android:fontFamily="@font/montserrat_light"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+                        <!-- Others2 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageButton
+                                android:id="@+id/imageButton9"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_shirt_placeholder"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <TextView
+                                android:id="@+id/textViewName9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Insulated Tumbler | ₱865"
+                                android:textSize="13sp"
+                                android:layout_marginBottom="15dp"
+                                android:fontFamily="@font/montserrat_light"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Lace 1 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageButton
+                                android:id="@+id/imageButton11"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_shirt_placeholder"
+                                android:background="@drawable/rectangle_background"
+                                android:contentDescription="Shirt Image 1"/>
+
+                            <TextView
+                                android:id="@+id/textViewName11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Mask and Mirrors | ₱380"
+                                android:textSize="13sp"
+                                android:layout_marginBottom="15dp"
+                                android:fontFamily="@font/montserrat_light"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+                        <!-- Lace 2 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageButton
+                                android:id="@+id/imageButton12"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_shirt_placeholder"
+                                android:background="@drawable/rectangle_background"
+                                android:contentDescription="Shirt Image 2"/>
+
+                            <TextView
+                                android:id="@+id/textViewName12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Feu Smiley Tote Bag | ₱180"
+                                android:textSize="13sp"
+                                android:layout_marginBottom="15dp"
+                                android:fontFamily="@font/montserrat_light"
+                                android:textColor="@color/white"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_home_address_title"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    >
+                    <TextView
+                        android:id="@+id/textViewHomeAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery Details"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="35sp"
+                        android:paddingTop="30dp"
+                        android:paddingStart="10dp"
+                        android:paddingBottom="18dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginStart="-8dp"
+                        android:layout_marginEnd="-8dp"
+                        android:gravity="center_vertical"
+                        android:textStyle="bold"
+                        />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Delivery Options"
+                        android:textColor="@color/primary"
+                        android:fontFamily="@font/montserrat_light"
+                        android:textSize="20sp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <!-- Spinner (Dropdown) -->
+                    <Spinner
+                        android:id="@+id/categorySpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_background"
+                        android:entries="@array/categories_array"
+                        android:minHeight="48dp"
+                        android:padding="12dp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Delivery Details"
+                        android:textColor="@color/primary"
+                        android:fontFamily="@font/montserrat_light"
+                        android:textSize="20sp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <EditText
+                            android:id="@+id/customerName"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/search_background"
+                            android:drawableStart="@drawable/ic_user"
+                            android:drawablePadding="@dimen/item_text_margin_left"
+                            android:hint="Your Full Name"
+                            android:paddingStart="10dp"
+                            android:paddingLeft="13dp"
+                            android:paddingEnd="20dp"
+                            android:paddingRight="40dp"
+                            android:textSize="13sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/customerAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/search_background"
+                        android:drawableStart="@drawable/ic_useraddress"
+                        android:drawablePadding="@dimen/item_text_margin_left"
+                        android:hint="Your Complete Address"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="13dp"
+                        android:paddingEnd="20dp"
+                        android:paddingRight="40dp"
+                        android:textSize="13sp"
+                        tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Mode of Payment"
+                        android:textColor="@color/primary"
+                        android:fontFamily="@font/montserrat_light"
+                        android:textSize="20sp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginStart="5dp"
+                        tools:ignore="HardcodedText" />
+
+                    <!-- First Row of RadioButtons -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <!-- Radio Buttons 1 and 2 -->
+                        <RadioGroup
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="16dp"
+                            android:gravity="center"
+                            tools:ignore="UselessParent">
+
+                            <RadioButton
+                                android:id="@+id/cash"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:buttonTint="@color/primary"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Cash on delivery"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+                            <RadioButton
+                                android:id="@+id/bank"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:buttonTint="@color/primary"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Online Payment"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!-- Toggle Button -->
+                <ToggleButton
+                    android:id="@+id/toggleButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:textOn="Cancel"
+                    android:background="@drawable/button_design1"
+                    android:textOff="Place Order"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/montserrat"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
 
 
 </LinearLayout>

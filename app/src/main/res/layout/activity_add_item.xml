@@ -6,9 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#004225"
-    tools:context=".Activity2"
-
+    android:background="#F5F5DC"
+    tools:context=".AddItemActivity"
     >
 
     <androidx.appcompat.widget.Toolbar
@@ -31,7 +30,7 @@
         android:layout_height="wrap_content"
         android:text="ADD ITEM"
         android:fontFamily="@font/montserrat_medium"
-        android:textColor="@color/white"
+        android:textColor="#004225"
         android:textSize="30sp"
         android:textAlignment="center"
         android:layout_marginTop="25dp"
@@ -101,7 +100,7 @@
         android:fontFamily="@font/montserrat_medium"
         android:shadowColor="#FFFFFF"
         android:textSize="24sp"
-        android:text="ADD ITEM"
+        android:text="ADD"
          />
 
     <FrameLayout
@@ -113,7 +112,7 @@
             android:id="@+id/prevAct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="start|bottom"
+            android:layout_gravity="start"
             android:layout_margin="28dp"
             android:clickable="true"
             android:contentDescription="@string/app_name"

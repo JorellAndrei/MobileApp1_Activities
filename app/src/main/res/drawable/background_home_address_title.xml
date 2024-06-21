@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- text_border_with_shadow.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background shape (with border) -->
+    <item
+        android:left="40dp"
+        android:right="70dp"
+        android:top="100dp"
+        android:bottom="20dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/primary" /> <!-- Background color of the shape -->
+            <stroke
+                android:width="4dp"
+                android:color="@color/primary" /> <!-- Border width and color -->
+            <corners android:radius="100dp"/>
+        </shape>
+
+    </item>
+
+</layer-list>

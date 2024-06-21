@@ -10,10 +10,10 @@
 
     <ImageView
         android:id="@+id/logoImageView"
-        android:layout_width="500px"
-        android:layout_height="500px"
+        android:layout_width="400sp"
+        android:layout_height="400sp"
         android:contentDescription="Jorell Andrei Finez"
-        android:src="@mipmap/logo"
+        android:src="@drawable/letter_j"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

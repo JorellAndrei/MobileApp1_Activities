@@ -1,0 +1,6 @@
+<!-- ic_radio_unchecked.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <stroke android:width="2dp" android:color="#fefefe" />
+    <size android:width="24dp" android:height="24dp" />
+</shape>
