@@ -8,9 +8,9 @@
     </string-array>
 
     <string-array name="categories_array">
-        <item>Cash on Delivery</item>
-        <item>Online Payment</item>
-        <item>Bank Payment</item>
-        <item>Google/Apple Pay</item>
+        <item>In-Store Pickup</item>
+        <item>Standard Shipping</item>
+        <item>Same-day Delivery</item>
+        <item>Express Shipping</item>
     </string-array>
 </resources>

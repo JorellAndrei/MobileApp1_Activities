@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".homepage">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#FFB000"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:logo="@mipmap/ic_launcher_foreground"
+        app:title=""
+        app:titleMargin="10dp"
+        app:titleMarginStart="10dp"
+        app:titleTextColor="#004225" />
+
+    <!-- Welcome Message -->
+    <TextView
+        android:id="@+id/welcome_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="30dp"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:padding="16dp" />
+
+    <!-- Image Banner (Replace with your actual image) -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/letter_j"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        android:contentDescription="Home Banner Image" />
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="30dp">
+
+        <Button
+            android:id="@+id/act5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_design1"
+            android:textColor="@color/primary"
+            android:paddingTop="17dp"
+            android:text="ACTIVITY 5"
+            android:layout_marginBottom="15dp"/>
+
+        <Button
+            android:id="@+id/act6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ACTIVITY 6"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_design1"
+            android:textColor="@color/primary"
+            android:paddingTop="17dp"/>
+
+        <Button
+            android:id="@+id/act7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ACTIVITY 7"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_design1"
+            android:textColor="@color/primary"
+            android:paddingTop="17dp"/>
+
+    </LinearLayout>
+
+    <!-- Featured Content -->
+    <TextView
+        android:id="@+id/featured_content_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Featured Content"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:padding="16dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/featured_content_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/white"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never"
+        android:scrollbars="none"/>
+
+
+</LinearLayout>

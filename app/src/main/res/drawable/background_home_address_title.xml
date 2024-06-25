@@ -4,8 +4,8 @@
 
     <!-- Background shape (with border) -->
     <item
-        android:left="40dp"
-        android:right="70dp"
+        android:left="100dp"
+        android:right="100dp"
         android:top="100dp"
         android:bottom="20dp">
         <shape android:shape="rectangle">

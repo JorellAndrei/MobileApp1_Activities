@@ -12,7 +12,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tbar"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="55dp"
         android:background="#FFB000"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -139,14 +139,17 @@
             app:cornerRadius="0dp"/>
     </LinearLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/nextButton"
+    <!-- Follow Button -->
+    <Button
+        android:id="@+id/returnback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_margin="32dp"
-        android:clickable="true"
-        android:contentDescription="@string/app_name"
-        app:srcCompat="@android:drawable/ic_media_play" />
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:padding="15dp"
+        android:text="Go Back"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_design3"
+        tools:ignore="HardcodedText" />
 
 </LinearLayout>

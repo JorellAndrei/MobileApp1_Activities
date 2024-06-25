@@ -7,4 +7,6 @@
     <color name="secondary">#004225</color>
     <color name="primary2">#F5F5DC</color>
     <color name="secondary2">#FFCF9D</color>
+    <color name="colorDefault">#F0FFFFFF</color>
+    <color name="grey">#818181</color>
 </resources>

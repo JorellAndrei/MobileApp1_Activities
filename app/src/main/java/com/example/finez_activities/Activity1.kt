@@ -2,13 +2,17 @@ package com.example.finez_activities
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
@@ -32,12 +36,6 @@ class Activity1 : AppCompatActivity() {
         // Hide the keyboard
         val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(window.decorView.windowToken, 0)
-
-        val nextBtn = findViewById<FloatingActionButton>(R.id.nextButton)
-        nextBtn.setOnClickListener{
-            val intent = Intent(this, Activity2::class.java)
-            startActivity(intent)
-        }
 
         val edt1 = findViewById<EditText>(R.id.editTextNumberDecimal)
         val edt2 = findViewById<EditText>(R.id.editTextNumberDecimal2)
@@ -81,6 +79,46 @@ class Activity1 : AppCompatActivity() {
             res.text = "${Math.round(result * 100.0) / 100.0}"
         }
 
+        findViewById<Button>(R.id.returnback).setOnClickListener {
+            finish()
+        }
 
+        // Set the Toolbar as the action bar
+        setSupportActionBar(findViewById(R.id.tbar))
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_profile -> {
+                startActivity(Intent(this, ProfileActivity::class.java))
+                true
+            }
+            R.id.action_calculate -> {
+                startActivity(Intent(this, Activity1::class.java))
+                true
+            }
+            R.id.action_exit -> {
+                showExitConfirmationDialog()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun showExitConfirmationDialog() {
+        AlertDialog.Builder(this)
+            .setTitle("Exit")
+            .setMessage("Are you sure you want to exit?")
+            .setPositiveButton("Yes") { dialogInterface: DialogInterface, i: Int ->
+                finishAffinity() // Close all activities of the app
+            }
+            .setNegativeButton("No", null)
+            .create()
+            .show()
     }
 }

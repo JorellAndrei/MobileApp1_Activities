@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         // Delayed execution to transition to main content/activity
         val splashDuration = 3000L // 3 seconds
         Handler().postDelayed({
-            startActivity(Intent(this, Activity1::class.java))
+            startActivity(Intent(this, Activities::class.java))
             finish()
         }, splashDuration)
     }
